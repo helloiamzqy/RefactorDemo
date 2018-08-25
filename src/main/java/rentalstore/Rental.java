@@ -21,11 +21,7 @@ public class Rental {
     }
 
     public double getFrequentRenterPoints() {
-        double frequentRenterPoints = 1 ;
-        if((movie instanceof NewReleaseMovie) && getDayRented() > 1){
-            frequentRenterPoints++;
-        }
-        return frequentRenterPoints;
+      return movie.getFrequentRenterPoints(dayRented);
     }
     public double getAmount(){
         return movie.getAmount(dayRented);
