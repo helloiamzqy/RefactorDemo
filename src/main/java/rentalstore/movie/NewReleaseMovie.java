@@ -10,4 +10,12 @@ public class NewReleaseMovie extends Movie{
         thisAmount+= dayRented*3;
         return thisAmount;
     }
+
+    @Override
+    public double getFrequentRenterPoints(int dayRented) {
+        if(dayRented> 1){
+           return 2;
+        }
+        return 1;
+    }
 }
