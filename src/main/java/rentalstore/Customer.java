@@ -1,11 +1,27 @@
 package rentalstore;
 
-import java.util.Enumeration;
 import java.util.Vector;
 
 public class Customer {
     private String name;
     private Vector rentals = new Vector();
+    Statement statement;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Vector getRentals() {
+        return rentals;
+    }
+
+    public void setRentals(Vector rentals) {
+        this.rentals = rentals;
+    }
+
+    public void setStatement(Statement statement) {
+        this.statement = statement;
+    }
 
     public Customer(String name) {
         this.name = name;
@@ -19,31 +35,7 @@ public class Customer {
         return name;
     }
 
-    public String statement(){
-        double totalAmount = 0;
-        int frequentRenterPoints = 0;
-        Enumeration rentals = this.rentals.elements();
-        String result = "Rental Record for " + getName() + "\n";
-        while(rentals.hasMoreElements()){
-            double thisAmount =0;
-            Rental each = (Rental) rentals.nextElement();
-
-            thisAmount = each.getAmount();
-
-            //add frequent renter points
-            frequentRenterPoints ++;
-            //add bonus for a two day new release rental
-            frequentRenterPoints += each.getFrequentRenterPoints();
-
-            //show figures for this rental
-            result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(thisAmount) + "\n";
-            totalAmount += thisAmount;
-        }
-
-        //add footer lines
-        result += "Amount owed is" + String.valueOf(totalAmount) + "\n";
-        result += "You earned" + String.valueOf(frequentRenterPoints) + " frequent renter points";
-        return result;
+    public String getStatementInfo(){
+        return statement.getStatement(this);
     }
-
 }
