@@ -1,6 +1,9 @@
 package rentalstore;
 import org.junit.Assert;
 import org.junit.Test;
+import rentalstore.movie.*;
+import rentalstore.statement.HtmlStatement;
+import rentalstore.statement.RentalStatement;
 
 import static org.junit.Assert.assertEquals;
 
@@ -99,4 +102,6 @@ public class CustomerTest {
                 "<P>You owe<EM>3.0</EM><P>\n" +
                 "On this rental you earned <EM>1</EM> frequent renter points<P>", statement);
     }
+
+
 }

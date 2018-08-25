@@ -1,4 +1,4 @@
-package rentalstore;
+package rentalstore.movie;
 
 public abstract class Movie {
 //    public static final int CHILDRENS = 2;
@@ -16,5 +16,5 @@ public abstract class Movie {
         return title;
     }
 
-    abstract double getAmount(int dayRented);
+    public abstract double getAmount(int dayRented);
 }

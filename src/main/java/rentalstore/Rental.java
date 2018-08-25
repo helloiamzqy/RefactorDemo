@@ -1,5 +1,8 @@
 package rentalstore;
 
+import rentalstore.movie.Movie;
+import rentalstore.movie.NewReleaseMovie;
+
 public class Rental {
     Movie movie;
     private int dayRented;
@@ -17,8 +20,8 @@ public class Rental {
         return dayRented;
     }
 
-    int getFrequentRenterPoints() {
-        int frequentRenterPoints = 1 ;
+    public double getFrequentRenterPoints() {
+        double frequentRenterPoints = 1 ;
         if((movie instanceof NewReleaseMovie) && getDayRented() > 1){
             frequentRenterPoints++;
         }

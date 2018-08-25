@@ -1,5 +1,7 @@
 package rentalstore;
 
+import rentalstore.statement.Statement;
+
 import java.util.Vector;
 
 public class Customer {

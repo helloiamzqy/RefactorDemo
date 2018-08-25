@@ -1,6 +1,4 @@
-package rentalstore;
-
-import java.util.Enumeration;
+package rentalstore.statement;
 
 public class RentalStatement extends Statement {
 

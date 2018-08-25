@@ -1,4 +1,7 @@
-package rentalstore;
+package rentalstore.statement;
+
+import rentalstore.Customer;
+import rentalstore.Rental;
 
 import java.util.Enumeration;
 

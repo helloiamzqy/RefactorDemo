@@ -1,11 +1,11 @@
-package rentalstore;
+package rentalstore.movie;
 
 public class ChildrenMovie extends Movie{
     public ChildrenMovie(String title) {
         super(title);
     }
 
-    double getAmount(int dayRented) {
+    public double getAmount(int dayRented) {
         double thisAmount = 0;
         thisAmount+=1.5;
         if(dayRented > 3){

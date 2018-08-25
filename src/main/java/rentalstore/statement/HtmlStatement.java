@@ -1,4 +1,4 @@
-package rentalstore;
+package rentalstore.statement;
 
 public class HtmlStatement extends Statement {
     @Override
