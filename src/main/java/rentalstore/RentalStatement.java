@@ -16,8 +16,8 @@ public class RentalStatement extends Statement {
 
     @Override
     protected String getFooterString(double totalAmount, int frequentRenterPoints) {
-        String result = "Amount owed is" + String.valueOf(totalAmount) + "\n";
-        result += "You earned" + String.valueOf(frequentRenterPoints) + " frequent renter points";
+        String result = "Amount owed is " + String.valueOf(totalAmount) + "\n";
+        result += "You earned " + String.valueOf(frequentRenterPoints) + " frequent renter points";
         return result;
     }
 }
